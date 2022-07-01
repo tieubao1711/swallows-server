@@ -1,0 +1,42 @@
+{
+  "name": "swallows-server",
+  "version": "1.0.0",
+  "description": "best server",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "prod": "sudo forever start -o logs/log.log -e logs/err.log dist/index.js",
+    "dev": "set DEBUG=socket.io*&&ts-node-dev --respawn --transpileOnly src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "schema-codegen": "npx schema-codegen src/clientModels/constants/* --csharp --output D:/GameProjects/ESOnline/client/Assets/Scripts"
+  },
+  "author": "tranxuanquang",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.12.14",
+    "@types/socket.io": "^2.1.4",
+    "mongoose": "^6.4.0",
+    "moongoose": "^0.0.5",
+    "socket.io": "^2.3.0",
+    "ts-md5": "^1.2.11",
+    "ts-node": "^8.5.4",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.2",
+    "typescript-tslint-plugin": "^0.5.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/uuid": "^8.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tieubao1711/swallows-server.git"
+  },
+  "keywords": [
+    "swallows-server"
+  ],
+  "bugs": {
+    "url": "https://github.com/tieubao1711/swallows-server/issues"
+  },
+  "homepage": "https://github.com/tieubao1711/swallows-server#readme"
+}
